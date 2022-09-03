@@ -13,6 +13,8 @@
 
 Route::get('/', 'ThreadController@index');
 Route::post('/', 'ThreadController@create')->middleware('auth');
+Route::get('/thread', 'PostController@index');
+Route::post('/thread', 'PostController@create');
 
 Auth::routes();
 
